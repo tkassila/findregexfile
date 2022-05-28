@@ -186,7 +186,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonSelectDirectory() {
-        System.out.println("pressed_buttonSelectDirectory");
+    //    System.out.println("pressed_buttonSelectDirectory");
         if (fileDirChooser != null)
             dirChooser.setInitialDirectory(fileDirChooser);
         File selectedDirectory = dirChooser.showDialog(this.primaryStage);
@@ -211,7 +211,7 @@ public class FindRegexFileController {
     @FXML
     protected void someWidgetChanged_DisAble_OrNot_StartSerchButton()
     {
-        System.out.println("someWidgetChanged");
+    //    System.out.println("someWidgetChanged");
         buttonStartSearch.setDisable(false);
         String str_textFieldSelectDirectory = textFieldSelectDirectory.getText();
         String str_textFieldFileName = textFieldFileName.getText();
@@ -252,7 +252,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_checkBoxListOnlyFiles() {
-        System.out.println("pressed_checkBoxListOnlyFiles");
+  //      System.out.println("pressed_checkBoxListOnlyFiles");
         if (checkBoxListOnlyFiles.isSelected())
         {
             boolean bValue = true;
@@ -272,25 +272,25 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_checkBoxNoRegex() {
-        System.out.println("pressed_checkBoxNoRegex");
+   //     System.out.println("pressed_checkBoxNoRegex");
         someWidgetChanged_DisAble_OrNot_StartSerchButton();
     }
 
     @FXML
     protected void pressed_checkBoxSeekInDirs() {
-        System.out.println("pressed_checkBoxSeekInDirs");
+  //     System.out.println("pressed_checkBoxSeekInDirs");
         someWidgetChanged_DisAble_OrNot_StartSerchButton();
     }
 
     @FXML
     protected void pressed_checkBoxNotInFiles() {
-        System.out.println("pressed_checkBoxNotInFiles");
+   //    System.out.println("pressed_checkBoxNotInFiles");
         someWidgetChanged_DisAble_OrNot_StartSerchButton();
     }
 
     @FXML
     protected void pressed_buttonStartSearch() {
-        System.out.println("pressed_buttonStartSearch");
+    //   System.out.println("pressed_buttonStartSearch");
         startSearchFilesAndText();
     }
 
@@ -686,7 +686,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonRead() {
-        System.out.println("pressed_buttonRead");
+   //     System.out.println("pressed_buttonRead");
         String strSelected = listFoundedFiles.getSelectionModel().getSelectedItem();
         if (strSelected == null || strSelected.trim().length() == 0)
             return;
@@ -704,7 +704,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonSave() {
-        System.out.println("pressed_buttonSave");
+    //    System.out.println("pressed_buttonSave");
         if (!b_textAreaFileContent || selectedFile == null)
             return;
         Path path = Paths.get(selectedFile.getAbsolutePath());
@@ -723,7 +723,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonFindFirstMatch() {
-        System.out.println("pressed_buttonFindFirstMatch");
+    //    System.out.println("pressed_buttonFindFirstMatch");
         String strConntent = textAreaFileContent.getText();
         if (strConntent == null || strConntent.trim().length()==0)
             return;
@@ -736,7 +736,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonFindNext() {
-        System.out.println("pressed_buttonFindNext");
+    //    System.out.println("pressed_buttonFindNext");
         if (arrMatchResults == null || arrMatchResults.length == 0)
             return;
         if ((iCurrentMatchGroup+1) >= arrMatchResults.length)
@@ -764,7 +764,7 @@ public class FindRegexFileController {
 
     @FXML
     protected void pressed_buttonFindPrev() {
-        System.out.println("pressed_buttonFindPrev");
+     //   System.out.println("pressed_buttonFindPrev");
         if (arrMatchResults == null || arrMatchResults.length == 0)
             return;
         if ((iCurrentMatchGroup-1) < 0)
