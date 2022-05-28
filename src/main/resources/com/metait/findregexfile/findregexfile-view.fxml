@@ -34,11 +34,11 @@
       </MenuBar>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="646.0" prefWidth="977.0" VBox.vgrow="ALWAYS">
          <children>
-            <SplitPane dividerPositions="0.9956691208315289" prefHeight="374.0" prefWidth="926.0">
+            <SplitPane fx:id="splitPane" dividerPositions="0.9956691208315289" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" prefHeight="636.0" prefWidth="926.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="55.0">
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="55.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="646.0" prefWidth="1035.0" spacing="5.0">
+                        <VBox alignment="TOP_CENTER" prefHeight="646.0" prefWidth="1035.0" spacing="5.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <opaqueInsets>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </opaqueInsets>
@@ -85,7 +85,6 @@
                                     <Label fx:id="labelMsg" prefHeight="30.0" prefWidth="479.0" />
                                  </children>
                               </HBox>
-                              <TextArea fx:id="textAreaFileContent" maxWidth="1.7976931348623157E308" prefHeight="305.0" prefWidth="1015.0" styleClass="-fx-font-weight: bold" VBox.vgrow="ALWAYS" />
                            </children>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -93,56 +92,14 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="924.0">
                      <children>
-                        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="646.0" prefWidth="1035.0" spacing="5.0">
+                        <VBox alignment="TOP_CENTER" prefHeight="646.0" prefWidth="1035.0" spacing="5.0" AnchorPane.bottomAnchor="-8.799999999999955" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <opaqueInsets>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </opaqueInsets>
                            <children>
-                              <HBox maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="35.0" spacing="10.0">
-                                 <children>
-                                    <Button fx:id="buttonSelectDirectory1" mnemonicParsing="false" onAction="#pressed_buttonSelectDirectory" text="Select directory" />
-                                    <Label prefHeight="30.0" prefWidth="84.0" text="Selected dir:" />
-                                    <TextField fx:id="textFieldSelectDirectory1" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" HBox.hgrow="ALWAYS" />
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="20.0" layoutY="60.0" maxWidth="1.7976931348623157E308" prefHeight="35.0" spacing="10.0">
-                                 <children>
-                                    <Label prefHeight="30.0" prefWidth="216.0" text="File Name or extension to seek:" />
-                                    <TextField fx:id="textFieldFileName1" prefHeight="30.0" prefWidth="805.0" HBox.hgrow="ALWAYS" />
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="20.0" layoutY="20.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" prefWidth="1015.0" spacing="10.0">
-                                 <children>
-                                    <Label prefHeight="30.0" prefWidth="132.0" text="Find regex or  string" />
-                                    <TextField fx:id="textFieldSearch1" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="30.0" HBox.hgrow="ALWAYS" />
-                                 </children>
-                              </HBox>
-                              <HBox prefHeight="65.0" prefWidth="1015.0" spacing="10.0">
-                                 <children>
-                                    <CheckBox fx:id="checkBoxNotInFiles1" mnemonicParsing="false" onAction="#pressed_checkBoxNotInFiles" prefHeight="30.0" prefWidth="227.0" text="search text NOT in founded fiiles" />
-                                    <CheckBox fx:id="checkBoxSeekInDirs1" mnemonicParsing="false" onAction="#pressed_checkBoxSeekInDirs" prefHeight="35.0" prefWidth="105.0" text="Seek subdirs" />
-                                    <CheckBox fx:id="checkBoxNoRegex1" mnemonicParsing="false" onAction="#pressed_checkBoxNoRegex" prefHeight="30.0" prefWidth="196.0" text="NO regex in search string" />
-                                    <CheckBox fx:id="checkBoxListOnlyFiles1" layoutX="247.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_checkBoxListOnlyFiles" prefHeight="35.0" prefWidth="105.0" text="List only files" />
-                                    <Button fx:id="buttonStartSearch1" mnemonicParsing="false" onAction="#pressed_buttonStartSearch" text="Start search" />
-                                    <Label prefHeight="30.0" prefWidth="158.0" text="Founded in/not in files:" />
-                                 </children>
-                              </HBox>
-                              <ListView fx:id="listFoundedFiles1" maxWidth="1.7976931348623157E308" prefHeight="195.0" prefWidth="873.0" VBox.vgrow="ALWAYS" />
-                              <HBox prefHeight="52.0" prefWidth="1015.0" spacing="10.0">
-                                 <children>
-                                    <Button fx:id="buttonRead1" layoutX="288.0" mnemonicParsing="false" onAction="#pressed_buttonRead" prefWidth="64.0" text="Read" />
-                                    <Button fx:id="buttonSave1" layoutX="288.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_buttonSave" prefWidth="64.0" text="Save" />
-                                    <Label prefHeight="28.0" prefWidth="16.0" text=" " />
-                                    <Button fx:id="buttonFindFirstMatch1" mnemonicParsing="false" onAction="#pressed_buttonFindFirstMatch" prefHeight="30.0" prefWidth="138.0" text="Find first match" />
-                                    <Button fx:id="buttonFindNext1" layoutX="288.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_buttonFindNext" prefHeight="30.0" prefWidth="64.0" text="Next" />
-                                    <Button fx:id="buttonFindPrev1" layoutX="288.0" layoutY="10.0" mnemonicParsing="false" onAction="#pressed_buttonFindPrev" prefHeight="30.0" prefWidth="86.0" text="Previous" />
-                                    <Label prefHeight="30.0" prefWidth="64.0" text="Message:" />
-                                    <Label fx:id="labelMsg1" prefHeight="30.0" prefWidth="479.0" />
-                                 </children>
-                              </HBox>
-                              <TextArea fx:id="textAreaFileContent1" maxWidth="1.7976931348623157E308" prefHeight="305.0" prefWidth="1015.0" styleClass="-fx-font-weight: bold" VBox.vgrow="ALWAYS" />
+                              <TextArea fx:id="textAreaFileContent" maxWidth="1.7976931348623157E308" prefHeight="305.0" prefWidth="1015.0" styleClass="-fx-font-weight: bold" VBox.vgrow="ALWAYS" />
                            </children>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

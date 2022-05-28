@@ -5,8 +5,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
+import javafx.geometry.Orientation;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
@@ -62,6 +65,8 @@ public class FindRegexFileController {
     private Button buttonFindPrev;
     @FXML
     private TextArea textAreaFileContent;
+    @FXML
+    private SplitPane splitPane;
     private DirectoryChooser dirChooser = new DirectoryChooser();
     private Stage primaryStage;
     private File fileDirChooser = null;
@@ -85,12 +90,17 @@ public class FindRegexFileController {
 
     @FXML
     public void initialize() {
+        splitPane.setOrientation(Orientation.VERTICAL);
+        splitPane.setDividerPositions(0.5);
+
+      // SplitPane.Divider divider = splitPane.getDividers().get(0);
         dirChooser.setTitle("Open search directory to seek files and text or regex");
         dirChooser.setInitialDirectory(new File("."));
         buttonStartSearch.setDisable(true);
         listFoundedFiles.setItems(listResultItems);
         textAreaFileContent.setStyle("-fx-font-weight: bold; fx-highlight-fill: lightgray; -fx-highlight-text-fill: firebrick; -fx-font-size: 14px;");
         listFoundedFiles.setStyle("-fx-font-weight: bold");
+
 
         disAblesomeUiControls(true);
 

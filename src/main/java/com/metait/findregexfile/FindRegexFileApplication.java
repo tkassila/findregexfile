@@ -31,6 +31,8 @@ public class FindRegexFileApplication extends Application {
         m_primaryStage = stage;
         controller.setPrimaryStage(m_primaryStage);
         Scene scene = new Scene(fxmlLoader.load(), 1040, 650);
+        scene.getStylesheets().add("app.css");
+
         stage.setTitle("FindRegexFiles: list or find files after file names or content!");
         stage.setScene(scene);
         stage.show();
